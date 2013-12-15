@@ -1,0 +1,27 @@
+<resources>
+
+    <style name="AppTheme" parent="@style/AppBaseTheme">
+        <item name="actionBarStyle">@style/ActionBar</item>
+        <item name="android:actionBarStyle">@style/ActionBar</item>
+    </style>
+
+    <style name="BlackTextAppTheme" parent="@style/AppTheme">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="AppBaseThemeNoActionBar" parent="@android:style/Theme.NoTitleBar" />
+
+    <style name="AppBaseTheme" parent="@style/Theme.AppCompat.Light.DarkActionBar" />
+
+    <style name="ActionBar" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="titleTextStyle">@style/ActionBarTitle</item>
+        <item name="android:titleTextStyle">@style/ActionBarTitle</item>
+        <item name="background">@color/actionbar_background</item>
+        <item name="android:background">@color/actionbar_background</item>
+    </style>
+
+    <style name="ActionBarTitle">
+        <item name="android:textColor">@color/actionbar_title</item>
+    </style>
+
+</resources>

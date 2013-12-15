@@ -1,0 +1,26 @@
+#
+# generated on 2013/12/15 05:19:55
+#
+# --table-start--
+dataClass=by.rss.kr.NewsItem
+tableName=news_items
+# --table-fields-start--
+# --field-start--
+fieldName=_id
+generatedId=true
+# --field-end--
+# --field-start--
+fieldName=date
+# --field-end--
+# --field-start--
+fieldName=title
+# --field-end--
+# --field-start--
+fieldName=description
+# --field-end--
+# --field-start--
+fieldName=imageUrl
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################

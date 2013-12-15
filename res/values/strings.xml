@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	
+	<!-- Change app_name info and url for you -->
+    <string name="app_name">Rss kr</string>
+    <string name="info">Designed and developed by Yevgeny Pelkin, group 86b</string>
+    <string name="url">http://news.tut.by/rss/index.rss</string>
+    
+    
+    
+    
+    
+    
+    <string name="refresh">Refsresh</string>
+    <string name="hello_world">Hello world!</string>
+    
+    <string name="connection_faield">There is no Network connection</string>
+    <string name="operation_failed">Operation Failed</string>
+
+</resources>

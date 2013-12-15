@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="actionbar_title">@color/main_text_gray</color>
+    <color name="actionbar_background">#FFFFFF</color>
+    <color name="main_text_gray">#999999</color>
+    <color name="main_yellow">#FEE600</color>
+    <color name="main_gray">#E9E9E9</color>
+    <color name="edit_text_background">#F8F8F8</color>
+    <color name="drawer_divider">#8B8B8B</color>
+    <color name="transparent">#00000000</color>
+    
+    <color name="green_slider">#00D2A8</color>
+    <color name="red_slider">#E0444B</color>
+
+</resources>
