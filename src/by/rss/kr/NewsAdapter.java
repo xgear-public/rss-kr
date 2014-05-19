@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Locale;
 
 import android.content.Context;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -56,7 +57,8 @@ public class NewsAdapter extends BaseAdapter {
 		NewsItem card = mData.get(position);
 		holder.title.setText(card.getTitle());
 		holder.date.setText(mFormat.format(card.getDate()));
-		Picasso.with(context).load(card.getImageUrl()).into(holder.img);
+		if(!TextUtils.isEmpty(card.getImageUrl()))
+			Picasso.with(context).load(card.getImageUrl()).into(holder.img);
 		return convertView;
 	}
 

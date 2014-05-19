@@ -4,6 +4,7 @@ import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.mcsoxford.rss.MediaThumbnail;
 import org.mcsoxford.rss.RSSFeed;
 import org.mcsoxford.rss.RSSItem;
 import org.mcsoxford.rss.RSSReader;
@@ -21,6 +22,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.ActionBarActivity;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -132,11 +134,21 @@ public class RootActivity extends ActionBarActivity {
 					RSSFeed feed = reader.load(uri);
 					List<RSSItem> rssItems = feed.getItems();
 					for (RSSItem rssItem : rssItems) {
-						retValue.add(new NewsItem(
-								rssItem.getPubDate(),
-								rssItem.getTitle(), 
-								rssItem.getDescription(), 
-								rssItem.getEnclosure().getUrl().toString()));
+						if (rssItem != null) {
+							String url = "";
+							if (rssItem.getEnclosure() != null && rssItem.getEnclosure().getUrl() != null)
+								url = rssItem.getEnclosure().getUrl().toString();
+							if(TextUtils.isEmpty(url)) {
+								List<MediaThumbnail> thumbnails = rssItem.getThumbnails();
+								if(thumbnails != null && !thumbnails.isEmpty()) {
+									url = thumbnails.get(0).getUrl().toString();
+								}
+							}
+							retValue.add(new NewsItem(rssItem.getPubDate(),
+									rssItem.getTitle(),
+									rssItem.getDescription(),
+									url));
+						}
 					}
 					context.getDBHelper().deleteAllNews();
 					context.getDBHelper().addNewsItemList(retValue);
